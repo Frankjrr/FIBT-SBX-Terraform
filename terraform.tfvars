@@ -1,13 +1,6 @@
-# terraform.tfvars
-
-vpc_cidr    = "10.0.0.0/16"
-subnet_cidr = "10.0.0.0/24"
-
-tags = {
-  Environment = "development"
-  Project     = "OptimizedVPC"
-}
+vpc_cidr_block = "10.0.0.0/16"
+subnet_cidr_block = "10.0.0.0/20"
+env_prefix = "dev"
+avail_zone = "eu-north-1a"
+instance_type = "t3.micro"
 public_key_location = "C:/Users/hassan.tariq/.ssh/id_rsa.pub"
-
-instance_type =  "t3.micro"
-

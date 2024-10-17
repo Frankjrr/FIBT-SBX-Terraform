@@ -1,15 +1,7 @@
-# outputs.tf
-
-output "vpc_id" {
-  description = "The ID of the VPC."
-  value       = aws_vpc.dev_vpc.id
+// outputs ///////////////////
+output "aws-ami_id" {
+  value = module.myapp-webserver.aws-ami_id.id
 }
-
-output "subnet_id" {
-  description = "The ID of the subnet."
-  value       = aws_subnet.dev_private_subnet.id
-}
-
 output "ec2-public_ip" {
-  value = aws_instance.myapp-server.public_ip
+  value = module.myapp-webserver.ec2-public_ip.public_ip
 }
