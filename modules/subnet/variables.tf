@@ -3,3 +3,4 @@ variable "avail_zone" {}
 variable "default_route_table_id" {}
 variable "env_prefix" {}
 variable "vpc_id" {}
+variable "vpc_cidr_block" {}
