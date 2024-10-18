@@ -30,7 +30,7 @@ resource "aws_default_security_group" "default" {
 }
 
 resource "aws_key_pair" "ssh-key" {
-  key_name = "promentheus"
+  key_name = "id_rsa"
   public_key = file(var.public_key_location)
 }
 
