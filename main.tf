@@ -1,8 +1,15 @@
-provider "aws" {}
 
 
 // -------------variable block-------------------------
+terraform {
 
+ # (Optional) Configure the backend if you plan to use remote state
+  backend "s3" {
+    bucket = "teraform-work-testing"
+    key    = "optimized-vpc/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
 resource "aws_vpc" "myapp-vpc" {
   cidr_block = var.vpc_cidr_block
   enable_dns_hostnames = true
